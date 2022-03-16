@@ -1,0 +1,613 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+a{
+   text-decoration: none;
+   color: #fff;
+}
+
+.menu, .underline-path, .menu-box, .close-menu, .dark{
+   display: none;
+}
+
+
+body, #container, header, nav, .btns, .btn-bookmark, #backup, .backup-pricelist, .about-project-head, .about-project-footer, .about-project-footer span, #project-backup-head, .enter-pledge, .pledge-flex, .pledge-amount, .money-span{
+   display: flex;
+}
+
+body, header, #backup{
+   flex-flow: column;
+}
+
+.btns, nav, .about-project-head, .backup-pricelist, .about-project-footer, #project-backup-head, .enter-pledge{
+   justify-content: space-between;
+}
+
+body{
+   background:  hsla(0, 0%, 48%, 0.048);
+   font-size: 16px;
+   position: relative;
+   letter-spacing: 0.1px;
+   line-height: 33px;
+   font-weight: 400;
+}
+
+/* BUTTONS */
+button, input{
+   border: none;
+   border-radius: 100px;
+   color: #fff;
+   height: 55px;
+   width: 165px;
+   font-size: 14px;
+   font-weight: 500;
+   cursor: pointer;
+}
+.btn-cyan{
+   background: hsl(176, 50%, 47%);
+}
+.btns{
+   margin: 10px 0;
+}
+
+.bookmark-icon:hover{
+   color: hsl(176, 72%, 28%);
+}
+
+.btn-bookmark{
+   color: #2F2F2F;
+   background: hsla(0, 0%, 48%, 0.151);
+}
+.btn-bookmark:hover{
+   color: hsl(176, 72%, 28%);
+   background: hsla(176, 50%, 47%, 0.096);
+}
+
+.btn-light-grey{
+   background: rgb(212, 211, 211);
+}
+.btn-cyan:hover, .btn-close-modal:hover, .btn-close-pledge:hover{
+   background: hsl(176, 72%, 28%);
+}
+.text{
+   align-self: center;
+   margin-left: 15px;
+}
+
+p, small{
+   color: hsl(0, 1%, 29%);
+}
+
+/* HEADER */
+header{
+   background: url(../images/image-hero-desktop.jpg)  no-repeat center center/cover;
+   height: 350px;
+}
+
+
+nav{
+   padding: 50px ;
+   z-index: 1000;
+}
+
+.navbar-list{
+   padding: 20px;
+}
+
+.mastercraft-logo{
+   position: absolute;
+   top: 66%;
+   z-index: 100;
+   align-self: center;
+}
+
+/* ARTICLE */
+#container{
+   justify-content: center;
+}
+
+#content, #backup, #project{
+   background: #fff;
+   width: 60%;
+   position: absolute;
+   padding: 20px 40px;
+   border-radius: 10px;
+   display: flex;
+   flex-flow: column;
+}
+
+#content{
+   top: 75%;
+}
+
+h1{
+   font-size: 25px;
+   margin: 15px 0;
+   font-weight: 700;
+}
+
+.content-header{
+   text-align: center;
+   margin: 30px 0;
+}
+
+#backup{
+   top: 156%;
+}
+
+.backup-pricelist{
+   margin: 30px 15px;
+}
+
+ .backup-line{
+   height: 12px;
+   border-radius: 10px;
+   margin: 10px 0;
+   background: hsla(0, 0%, 48%, 0.068);
+   border: none;
+}
+
+.backup-line::before{
+   background: hsla(176, 72%, 28%, 0.753);
+   content: '';
+   width: 67%;
+   position: absolute;
+   border-radius: 10px;
+   height: 10px;
+}
+
+h2{
+   font-size: 25px;
+   font-weight: 700;
+}
+
+.stroke-path{
+   height: 55px;
+   width: 1px;
+   background: hsl(176, 50%, 47%);
+}
+
+#project{
+   top: 222%;
+}
+
+h3{
+   font-size: 25px;
+   margin: 30px 0;
+}
+
+.about-project{
+   margin-top: 50px;
+   border: 1px solid hsla(0, 1%, 82%, 0.404);
+   border-radius: 10px;
+   padding: 20px;
+}
+
+h4{
+   font-size: 20px;
+   font-weight: 700;
+   margin: 15px 0;
+}
+
+.about-project-footer span, .pledge-flex{
+   gap: 14px;
+}
+
+.about-project-head{
+   margin: 15px 0;
+}
+
+.about-project-footer{
+   margin-top: 25px;
+}
+
+.pledge{
+   color: hsl(176, 50%, 47%);
+}
+.last{
+   color: rgba(0, 0, 0, 0.473);
+}
+.lasts{
+   color: hsla(176, 50%, 47%, 0.404);
+}
+
+/* CLOSE MODAL. */
+#close-pledge{
+   text-align: center;
+   position: absolute;
+   top: -26.5%;
+   background: #fff;
+   border-radius: 10px;
+   width: 73%;
+   align-self: center;
+   padding: 45px 0;
+   z-index: 2000;
+   display: none;
+}
+
+.closee{
+   display: none;
+}
+
+.close-pledge-content{
+   padding: 15px 25px;
+}
+
+.btn-close-pledge{
+   background: hsl(176, 50%, 47%);
+   height: 50px;
+   width: 100px;
+}
+
+/* PROJECT BACKUP */
+h5, h6{
+   font-size: 18px;
+}
+
+.project-backup{
+   display: none;
+   flex-flow: column;
+   z-index: 2000;
+   position: absolute;
+   top: 40%;
+   background: #fff;
+   width: 60%;
+   padding: 20px 40px;
+   border-radius: 10px;
+}
+
+.closes{
+   display: none;
+}
+
+.about-project-backup{
+   margin: 15px 0;
+}
+
+.btn-project-visible{
+   display: none;
+}
+
+.btn-project-visible{
+   display: flex;
+   z-index: 10000;
+}
+.about-project-backup-head{
+   justify-content: start;
+   gap: 15px;
+   margin: 5px 0;
+}
+
+.about-project-backup p{
+   padding-left: 45px;
+   letter-spacing: 0;
+   font-size: 15px;
+}
+
+.project-backup-footer{
+   margin: 10px 0;
+   margin-left: auto;
+  
+}
+
+.btn-close-modal{
+   color: #fff;
+   background: hsl(176, 50%, 47%);
+   width: 130px;
+}
+
+.none{
+   display: none;
+}
+
+a h5{
+   color: #000;
+}
+
+a h5:hover{
+   color: hsl(176, 50%, 47%); 
+}
+
+.enter-pledge{
+   flex-flow: column;
+   display: none;
+   gap: 25px;
+}
+
+.enter-pledge-display{
+   display: flex;
+   justify-content: space-between;
+   align-self: stretch;
+}
+
+.enter-pledge-display p{
+   padding: 0;
+}
+
+
+.enter-pledge-toggle{
+   display: flex;
+}
+
+.pledge-line{
+   height: 0.1px;
+   width: 108%;
+   color: rgba(51, 51, 51, 0.116);
+   align-self: center;
+   margin: 25px 0;
+}
+
+.overlay{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 2400px;
+   background-color: rgba(0,0,0,0);
+   z-index: 150;
+   display: none;
+}
+
+.overlay-dis{
+   display: block;
+   background: rgba(0, 0, 0, 0.3);
+}
+
+.pledge-amount{
+   gap: 16px;
+}
+
+.money-span{
+   width: 100px;
+   border: 1.5px solid hsl(176, 50%, 47%);
+   border-radius: 100px;
+   justify-content: space-evenly;
+   padding: 0px 20px;  
+}
+
+.money-span input{
+   font-size: 16px;
+   font-weight: 700;
+   color: #000;
+   width: 30px;
+   height: 50px;
+   border-radius: 0 100px  100px 0;
+   outline: none;
+   align-self: center;  
+}
+
+.money{
+   padding: 10px 0px 10px 0px;
+}
+
+.stroke-input{
+     height: 22px;
+     width: 1.5px;
+     background: hsl(176, 50%, 47%);
+     align-self: center;
+}
+
+#radio{
+   -webkit-appearance: none;
+   background-color: #fff;
+   border: 1px solid rgba(51, 51, 51, 0.26);
+   border-radius: 50%;
+   position: relative;
+   width: 25px;
+   height: 25px;
+}
+
+#radio:hover {
+   border: 1px solid hsl(176, 50%, 47%);
+}
+
+#radio:checked {
+   background: #fff;
+}
+
+#radio:checked::before{
+   position: absolute;
+   top: 5.5px;
+   left: 5.5px;
+   width: 12px;
+   height: 12px;
+   background: hsl(176, 50%, 47%);
+   content: '';
+   border-radius: 50%;
+}
+
+.example{
+   background: green;
+}
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 601px) {
+   body{
+      font-size: 15.5px;
+   }
+
+   .overlay{
+      height: 3270px;
+   }
+
+   /* HEADER */
+   header{
+   background: url(../images/image-hero-mobile.jpg)  no-repeat center center/cover;
+   }
+
+   .menu{
+      display: block;
+   }
+
+   nav{
+      padding: 40px 20px;
+   }
+   
+   .btn-bookmark, .stroke-path, .none, .project-backup-footer, .stroke-input, .navbar{
+      display: none;
+  }
+   
+   /* ARTICLE */
+   #content, #backup, #project{
+      width: 90%;
+      padding: 20px 10px;
+   }
+
+   .mastercraft-logo{
+      top: 75%;
+   }
+
+   #content{
+      top: 85%;
+   }
+
+   h1{
+      font-size: 22px;
+   }
+
+   .dark{
+      display: block;
+   }
+
+   .btns{
+      justify-content: space-evenly;
+   }
+
+   #backup{
+      top: 187%;
+   }
+
+   .backup-pricelist{
+      flex-flow: column;
+      text-align: center;
+   }
+
+   .underline-path{
+      display: block;
+      width: 55px;
+      height: 1px;
+      background: hsla(0, 1%, 29%, 0.13);
+      margin: 15px 0;
+      align-self: center;
+   }
+
+   #project{
+      top: 308%;
+   }
+
+   h4, h5{
+      font-size: 17px;
+      margin: 0;
+   }
+
+   .about-project{
+      margin: 10px 0;
+   }
+
+   .about-project-head, .about-project-footer{
+      flex-flow: column;
+   }
+
+   h2{
+      font-size: 30px; 
+   }
+
+   .pledge{
+      font-size: 16px;
+   }
+
+   .about-project-footer span{
+      margin: 20px 0;
+   }
+
+   /* PROJECT BACKUP */
+   .project-backup{
+      width: 95%;
+      padding: 20px 20px;
+   }
+   .about-project-backup-head{
+      flex-flow: row;
+   }
+
+   .none{
+      display: block;
+   }
+
+   .about-project-backup p{
+      padding-left: 7px;
+      letter-spacing: 0;
+      font-size: 15px;
+   }
+
+   .pledge-flex{
+      flex-flow: column;
+      gap: 0;
+   }
+
+   .pledge-line{
+      width: 111%;
+      margin: 0;
+   }
+
+   .enter-pledge-display{
+      flex-flow: column;
+      text-align: center;
+      gap: 16px;
+   }
+
+   .pledge-amount{
+      gap: 16px;
+   }
+
+   /* CLOSE MODAL. */
+   h3{
+      font-size: 20px;
+      margin: 15px 0;
+   }
+   #close-pledge{
+      top: -43%;
+      width: 100%;
+      padding: 40px 0;
+      font-size: 14px;
+   }
+
+   .close-pledge-content{
+      margin: 0;
+      padding: 0px 10px;
+   }
+
+   .btn-close-pledge{
+      margin-top: 20px;
+   }
+
+   /* MENU BOX */
+   .menu-box{
+      background: #fff;
+      width: 90%;
+      margin: auto;
+      justify-content: center;
+      border-radius: 10px;
+      z-index: 1000;
+   }
+   .menu-box a{
+      font-weight: 500;
+      color: #000;
+      display: flex;
+      padding: 23px;
+      font-size: 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+   }
+
+   .menu-box a:last-child{
+      border-bottom: none;
+   }
+
+   .menu-box-visible{
+      display: block;
+   }
+
+
+}
