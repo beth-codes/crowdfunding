@@ -7,13 +7,13 @@ const overlay = document.querySelector('.overlay');
 const btnProject = document.querySelector(' #btn-project');
 console.log(btnProject)
 const projectBackup = document.querySelector('.project-backup');
-const aboutProjectBackup = document.querySelector('.about-project-backup');
+
 const closeModal =document.querySelector('#btn-close-modals')
 const closePledge = document.querySelector('#close-pledge');
 
 
 // CLOSE PLEDGE
-const btnContinuPledge = document.querySelector('.btn-close-modal')
+const btnContinuPledge = document.querySelectorAll('.btn-close-modal')
 const btnClosePledge = document.querySelector('.btn-close-pledge')
 
 
@@ -52,16 +52,6 @@ closeModal.addEventListener('click', ()=> {
 
 });
 
-console.log(btnContinuPledge)
-
-btnContinuPledge.addEventListener('click', ()=> {
-
-   console.log(btnContinuPledge)
-   projectBackup.classList.toggle('btn-project-visible');
-
-   closePledge.style.display = 'block';
-
-})
 
 btnClosePledge.addEventListener('click', ()=> {
    closePledge.style.display = 'none';
@@ -69,15 +59,13 @@ btnClosePledge.addEventListener('click', ()=> {
 
 })
 
-
-
-
 // PLEDGE
 const input = document.querySelectorAll('#radio');
 const head = document.querySelectorAll('a h5')
 const enterPledge = document.querySelectorAll('.enter-pledge');
 const aboutProject = document.querySelectorAll('.about-project');
 const projectBorder = document.querySelectorAll('.project-border');
+const aboutProjectBackup = document.querySelectorAll('.about-project-backup');
 
 
 projectBackup.addEventListener('click', changeBorder);
@@ -85,49 +73,33 @@ projectBackup.addEventListener('click', changeBorder);
 function changeBorder() {
  
    for (let i = 0; i < input.length; i++) {
-      input[i].onclick = function () {
+   //   console.log(input[i]);
 
-         // if (enterPledge[i].style.display === 'none') {
-         //    enterPledge[i].style.display = 'block';
-         // } 
-         // else {
-         //    enterPledge[i].style.display = 'none';
-         // }
-        
-         // input[i].style.backgroundColor = 'blue';
-         // projectBorder[i].style.backgroundColor = 'green';
-         // projectBorder[i].classList.toggle('example');
-         if (projectBorder[i].style.backgroundColor === 'white') {
-            // projectBorder[i].style.backgroundColor = 'green' 
-            enterPledge[i].style.display = 'block';
-         } 
-         else {
-            projectBorder[i].style.backgroundColor = 'white'
-            enterPledge[i].style.display = 'none';
-         }
-      }
+     let inputName = input[i].getAttribute('name');
+     console.log(inputName);
+     input[i].onclick = function () {
+      // enterPledge[i].style.display = 'block';
+      enterPledge[i].classList.toggle('try');
       
-   //    for (let i = 0; i < aboutProjectBackup.length; i++) {
-        
-   //   }
+      // aboutProjectBackup[i].style.borderColor = 'hsl(176, 50%, 47%)';
+      aboutProjectBackup[i].classList.toggle('border-color');
+   
+   }  
+
   }
-      
+
+  for (let i = 0; i < btnContinuPledge.length; i++) {
+     console.log(btnContinuPledge[i])
+     btnContinuPledge[i].onclick = function () {
+      projectBackup.classList.toggle('btn-project-visible');
+          closePledge.style.display = 'block';
+   }
+
+  }
 }
 
 
 
-
-// input.forEach(input1 => {
-   
-//    enterPledge.forEach(enter1 => {
-//       // console.log(input1, enter1)
-//       input1.addEventListener('change', ()=> {
-//          enter1.classList.toggle('enter-pledge-toggle');
-//          aboutProjectBackup.style.borderColor = 'hsl(176, 50%, 47%)';
-//       })
-
-//    })
-// })
 
 
 

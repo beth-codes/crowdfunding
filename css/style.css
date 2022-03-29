@@ -314,27 +314,20 @@ a h5:hover{
 .enter-pledge{
    flex-flow: column;
    display: none;
-   gap: 25px;
 }
 
 .enter-pledge-display{
    display: flex;
    justify-content: space-between;
-   align-self: stretch;
 }
 
 .enter-pledge-display p{
    padding: 0;
 }
 
-
-.enter-pledge-toggle{
-   display: flex;
-}
-
 .pledge-line{
    height: 0.1px;
-   width: 108%;
+   width: 107%;
    color: rgba(51, 51, 51, 0.116);
    align-self: center;
    margin: 25px 0;
@@ -365,7 +358,7 @@ a h5:hover{
    border: 1.5px solid hsl(176, 50%, 47%);
    border-radius: 100px;
    justify-content: space-evenly;
-   padding: 0px 20px;  
+   padding: 0px 10px;  
 }
 
 .money-span input{
@@ -386,7 +379,7 @@ a h5:hover{
 .stroke-input{
      height: 22px;
      width: 1.5px;
-     background: hsl(176, 50%, 47%);
+     background: hsla(176, 50%, 47%, 0.452);
      align-self: center;
 }
 
@@ -419,9 +412,14 @@ a h5:hover{
    border-radius: 50%;
 }
 
-.example{
-   background: green;
+.try{
+   display: flex;
 }
+
+.border-color{
+   border-color: hsl(176, 50%, 47%);
+}
+
 
 /* RESPONSIVENESS */
 @media only screen and (max-width: 601px) {
@@ -499,7 +497,7 @@ a h5:hover{
    }
 
    h4, h5{
-      font-size: 17px;
+      font-size: 14px;
       margin: 0;
    }
 
@@ -537,7 +535,7 @@ a h5:hover{
    }
 
    .about-project-backup p{
-      padding-left: 7px;
+      padding-left: 0px;
       letter-spacing: 0;
       font-size: 15px;
    }
@@ -545,21 +543,30 @@ a h5:hover{
    .pledge-flex{
       flex-flow: column;
       gap: 0;
+      margin-top: -12px ;
    }
 
    .pledge-line{
       width: 111%;
-      margin: 0;
+      margin: 5px 0;
    }
 
    .enter-pledge-display{
       flex-flow: column;
       text-align: center;
-      gap: 16px;
+      gap: 12px;
    }
 
-   .pledge-amount{
-      gap: 16px;
+   #radio{
+      width: 20px;
+      height: 20px;
+   }
+
+   #radio:checked::before{
+      top: 4px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
    }
 
    /* CLOSE MODAL. */
