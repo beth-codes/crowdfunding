@@ -87,7 +87,6 @@ header{
    height: 350px;
 }
 
-
 nav{
    padding: 50px ;
    z-index: 1000;
@@ -218,12 +217,11 @@ h4{
 #close-pledge{
    text-align: center;
    position: absolute;
-   top: -26.5%;
    background: #fff;
    border-radius: 10px;
-   width: 73%;
-   align-self: center;
-   padding: 45px 0;
+   width: 45%;
+   top: 115%;
+   padding: 45px 40px;
    z-index: 2000;
    display: none;
 }
@@ -303,11 +301,7 @@ h5, h6{
    display: none;
 }
 
-a h5{
-   color: #000;
-}
-
-a h5:hover{
+.about-project-backup-head:hover, #btn-close-modals:hover{
    color: hsl(176, 50%, 47%); 
 }
 
@@ -327,7 +321,8 @@ a h5:hover{
 
 .pledge-line{
    height: 0.1px;
-   width: 107%;
+   width: 100%;
+   padding: -20px;
    color: rgba(51, 51, 51, 0.116);
    align-self: center;
    margin: 25px 0;
@@ -463,7 +458,7 @@ a h5:hover{
    }
 
    h1{
-      font-size: 22px;
+      font-size: 25px;
    }
 
    .dark{
@@ -496,8 +491,8 @@ a h5:hover{
       top: 308%;
    }
 
-   h4, h5{
-      font-size: 14px;
+   h5{
+      font-size: 15px;
       margin: 0;
    }
 
@@ -542,19 +537,19 @@ a h5:hover{
 
    .pledge-flex{
       flex-flow: column;
-      gap: 0;
-      margin-top: -12px ;
+      gap: 0px;
+      margin-top: -8px;
    }
 
    .pledge-line{
-      width: 111%;
-      margin: 5px 0;
+      margin: 10px 0px;
    }
 
    .enter-pledge-display{
       flex-flow: column;
       text-align: center;
-      gap: 12px;
+      align-self: center;
+      gap: 20px;
    }
 
    #radio{
@@ -571,12 +566,12 @@ a h5:hover{
 
    /* CLOSE MODAL. */
    h3{
-      font-size: 20px;
+      font-size: 24px;
       margin: 15px 0;
    }
    #close-pledge{
-      top: -43%;
-      width: 100%;
+      top: 50%;
+      width: 90%;
       padding: 40px 0;
       font-size: 14px;
    }
